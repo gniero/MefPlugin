@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -16,9 +17,13 @@ namespace MefPlugin
             
         public PluginHost()
         {
-            var catalog = new AssemblyCatalog(Assembly.GetExecutingAssembly());
+            Directory.CreateDirectory("Plugins");
 
-            var container = new CompositionContainer(catalog);
+            var aggregate = new AggregateCatalog();
+            aggregate.Catalogs.Add(new AssemblyCatalog(Assembly.GetExecutingAssembly()));
+            aggregate.Catalogs.Add(new DirectoryCatalog("Plugins"));
+
+            var container = new CompositionContainer(aggregate);
             container.ComposeParts(this);
         }
 

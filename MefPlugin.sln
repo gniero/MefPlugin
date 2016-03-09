@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MefPlugin", "MefPlugin\MefPlugin.csproj", "{FC31A0BC-4426-4E47-8307-A73872234432}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Core definition and application", "1 - Core definition and application", "{6CFE614C-6607-45D7-940B-D0A26115EA76}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - External plugins", "2 - External plugins", "{8910EB3F-FED2-4B1A-AD02-75FC6663BA8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThirdPartyPlugins", "ThirdPartyPlugins\ThirdPartyPlugins.csproj", "{9E6EFB03-3ACE-42E2-A968-6D5C9180A28C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +21,16 @@ Global
 		{FC31A0BC-4426-4E47-8307-A73872234432}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC31A0BC-4426-4E47-8307-A73872234432}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC31A0BC-4426-4E47-8307-A73872234432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E6EFB03-3ACE-42E2-A968-6D5C9180A28C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6EFB03-3ACE-42E2-A968-6D5C9180A28C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6EFB03-3ACE-42E2-A968-6D5C9180A28C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6EFB03-3ACE-42E2-A968-6D5C9180A28C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC31A0BC-4426-4E47-8307-A73872234432} = {6CFE614C-6607-45D7-940B-D0A26115EA76}
+		{9E6EFB03-3ACE-42E2-A968-6D5C9180A28C} = {8910EB3F-FED2-4B1A-AD02-75FC6663BA8A}
 	EndGlobalSection
 EndGlobal
